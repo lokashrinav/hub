@@ -1,5 +1,6 @@
 {
   "name": "super",
+  "homepage": "https://lokashrinav.github.io/hub",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,11 +10,15 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
+    "typed.js": "^2.0.16",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -35,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
