@@ -1,0 +1,118 @@
+/* Reset default browser styles */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body, header, nav, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  body {
+    display: grid;
+    grid-template-rows: 15vh 1fr 10vh;
+    min-height: 100vh;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  header {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    align-items: center;
+    text-align: start;
+  }
+  
+  .hero {
+    position: relative;
+    background-color: black; /* Dark blue background color */
+  }
+
+  .hero-content {
+    color: #5fc9ff;
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    position: relative;
+    top: 20%; /* Adjust the value as needed to move the text down */
+  }  
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #5fc9ff; /* Light cool blue color */
+    transform: translateY(-50%);
+    animation: glowing-line 1.5s ease-in-out infinite; /* Add animation for glowing effect */
+  }
+  
+  @keyframes glowing-line {
+    0% {
+      opacity: 0.3; /* Initial opacity */
+      box-shadow: 0 0 10px #5fc9ff; /* Add shadow for glowing effect */
+    }
+    50% {
+      opacity: 1; /* Maximum opacity */
+      box-shadow: 0 0 20px #5fc9ff; /* Increase shadow size for glowing effect */
+    }
+    100% {
+      opacity: 0.3; /* Back to initial opacity */
+      box-shadow: 0 0 10px #5fc9ff; /* Reduce shadow size for glowing effect */
+    }
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+  }
+  
+  .logo-image {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  nav {
+    text-align: center;
+    grid-column: 2 / -1;
+  }
+  
+  nav a {
+    color: #5fc9ff; /* Light cool blue color for the text */
+    margin: 0 20px; /* Adjust the gaps between the navigation links */
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  
+  
+  .hero {
+    background-color: black;
+    text-align: center;
+    color: black;
+  }
+  
+  .land-page {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+  .foot {
+    background-color: black;
+    text-align: center;
+    align-self: flex-end;
+    height: 10vh;
+    color: #5fc9ff; /* Light cool blue color for the text */
+    text-shadow:
+      0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 10px rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  
